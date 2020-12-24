@@ -12,4 +12,8 @@ class Animal {
   }
 }
 
+// 打开注释会热加载整个页面
+// if(module && module.hot) {
+//   module.hot.accept()
+// }
 const dog = new Animal('dog');
