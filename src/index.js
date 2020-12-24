@@ -1,3 +1,4 @@
+import './index.less';
 /* 
 test 1 使用es6的class语法
 需要使用babel-loader对js进行低版本的转换
