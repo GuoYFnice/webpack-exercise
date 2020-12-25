@@ -9,8 +9,11 @@ const path = require('path');
 // 可以判断当前环境-可以再.env里进行配置（cross-env）
 const isDev = process.env.NODE_ENV === 'development';
 const config = require('./public/config')[isDev ? 'dev' : 'build'];
+// 引入测量各个插件花费时间
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
 
-module.exports = {
+const webpackConfig = {
   //webpack的默认配置 入口
   // 单页面入口
   // entry: './src/index.js',
@@ -225,3 +228,6 @@ module.exports = {
     hot: true
   }
 }
+
+// 量各个插件和loader所花费的时间
+module.exports = smp.wrap(webpackConfig);

@@ -16,5 +16,6 @@
 | **copy-webpack-plugin** | **静态拷贝资源** |
 | **mini-css-extract-plugin** | **css文件单独打包（取代style-loader）** |
 | **optimize-css-assets-webpack-plugin** | **css文件压缩** |
+| **speed-measure-webpack-plugin** | **测量各个插件和loader所花费的时间** |
 | **......** | **......** |
 
